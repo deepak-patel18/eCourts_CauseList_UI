@@ -1,23 +1,55 @@
-# eCourts_CauseList_UI
-Full project (Requests + Selenium fallback) to fetch cause lists from eCourts and convert to PDF.
+# 🏛️ eCourts Cause List Downloader
 
-## Quick start (Windows + PowerShell)
-1. Open PowerShell and `cd` to project folder.
-2. Create venv:
-   ```powershell
-   python -m venv venv
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-   venv\Scripts\Activate.ps1
-   pip install -r requirements.txt
-   ```
-3. Install wkhtmltopdf binary (required for pdfkit):
-   - Windows: download installer from https://wkhtmltopdf.org/ and add to PATH.
-4. Run the Flask app:
-   ```powershell
-   python app.py
-   ```
-5. Open browser at http://127.0.0.1:5000/
+A Flask-based web application that allows users to fetch and download **daily cause lists** of Indian district courts in **real-time** directly from the official [eCourts website](https://services.ecourts.gov.in/ecourtindia_v6/?p=cause_list/).
 
-## Notes
-- Project includes a Selenium fallback in case the site uses JS to render content.
-- Update `scraper_core.py` parsing logic if the eCourts DOM changes.
+---
+
+## 🚀 Features
+
+- ✅ Real-time cause list scraping from eCourts portal  
+- ✅ Dynamic input for **State**, **District**, **Court Complex**, **Court Name**, and **Date**  
+- ✅ Option to download **all judges’ cause lists** in one click  
+- ✅ Automatic **PDF generation** using `pdfkit` + `wkhtmltopdf`  
+- ✅ Modern UI built with **Bootstrap 5**  
+- ✅ Clean and responsive interface  
+
+---
+
+## 🧠 Tech Stack
+
+| Component | Technology Used |
+|------------|-----------------|
+| Frontend   | HTML, CSS, Bootstrap 5, JavaScript |
+| Backend    | Python Flask |
+| Web Scraping | BeautifulSoup, Requests, Selenium |
+| PDF Conversion | pdfkit + wkhtmltopdf |
+| Browser Automation | WebDriver Manager |
+
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone this Repository
+```bash
+git clone https://github.com/<your-username>/eCourts_CauseList_UI.git
+cd eCourts_CauseList_UI
+ Create and Activate Virtual Environment
+python -m venv venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+venv\Scripts\Activate.ps1
+
+Install wkhtmltopdf
+
+Download and install from 👉 https://wkhtmltopdf.org/downloads.html
+
+Then verify:
+
+wkhtmltopdf --version
+
+Run the Application
+python app.py
+
+
+## 🗂️ Project Structure
+
