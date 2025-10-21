@@ -1,0 +1,8 @@
+flask
+requests
+beautifulsoup4
+lxml
+python-dateutil
+pdfkit
+selenium
+webdriver-manager
